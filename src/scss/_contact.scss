@@ -61,10 +61,16 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 15px;
+    @include breakpoint-down(mobile) {
+      width: 255px;
+    }
     p {
       color: #fff;
       font-size: 22px !important;
       margin-bottom: 0rem;
+      @include breakpoint-down(mobile) {
+        font-size: 16px !important;
+      }
     }
   }
 }
