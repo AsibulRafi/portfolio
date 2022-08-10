@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "EuroStyle Normal";
+  src: url(./eurostile/EuroStyleNormal.ttf);
+}
+@font-face {
+  font-family: "EuroStyle Bold";
+  src: url(./eurostile/EurostileBold.ttf);
+}
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "EuroStyle Normal", "Rubik", sans-serif;
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "EuroStyle Bold", sans-serif;
+  margin: 0;
+}
+p {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+.home__line {
+  border: 1px solid #e6ecf8;
+}

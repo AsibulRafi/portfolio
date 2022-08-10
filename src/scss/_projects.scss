@@ -1,0 +1,121 @@
+.projects {
+  padding: 5rem 4rem;
+  @include breakpoint-down(tab) {
+    padding: 5rem 2rem;
+  }
+  @include breakpoint-down(mobile) {
+    padding: 5rem 1rem;
+  }
+  &__heading {
+    padding: 0rem 16rem;
+    @media screen and (max-width: 1700px) {
+      padding: 0rem;
+    }
+    h2 {
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      @include breakpoint-down(mobile) {
+        font-size: 2rem;
+      }
+    }
+    p {
+      font-family: "Rubik", sans-serif;
+      font-weight: 300;
+      font-size: 1.4rem;
+      @include breakpoint-down(tab) {
+        font-size: 1.2rem;
+      }
+      @include breakpoint-down(mobile) {
+        font-size: 0.9375rem;
+      }
+    }
+  }
+  &__slider {
+    margin-top: 5rem;
+  }
+  .rec {
+    .rec-arrow {
+      display: none;
+    }
+    .rec-pagination {
+      margin-top: 2rem;
+    }
+    .rec-dot {
+      width: 15px;
+      height: 15px;
+      box-shadow: 0px 0px 1px 3px #6e07f3;
+      margin-inline: 10px;
+    }
+    .rec-dot_active {
+      width: 15px;
+      height: 15px;
+      margin-inline: 10px;
+      background-color: #6e07f3;
+      box-shadow: 0px 0px 1px 3px #6e07f3;
+    }
+  }
+  &__card {
+    width: 350px;
+    height: 500px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: minmax(100%, 1fr);
+    grid-template-areas: "stack";
+    overflow: hidden;
+    cursor: pointer;
+    @include breakpoint-down(mobile) {
+      width: 300px;
+    }
+    &-img,
+    &-details {
+      grid-area: stack;
+    }
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &-details {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      transform: translateY(calc(100% - 5rem));
+      transition: transform 600ms;
+
+      h3 {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 3rem;
+      }
+      p {
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 4rem;
+      }
+      &-btn {
+        padding: 1rem 2rem;
+        background-color: transparent;
+        border: 3px solid #6e07f3;
+        color: #fff;
+        border-radius: 15px;
+        font-size: 22px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        @include breakpoint-down(mobile) {
+          padding: 0.5rem 1rem;
+          font-size: 18px;
+        }
+        &:hover {
+          background: #6e07f3;
+        }
+      }
+    }
+  }
+  .projects__card:hover {
+    .projects__card-details {
+      transform: none;
+    }
+  }
+}

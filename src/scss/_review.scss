@@ -1,0 +1,101 @@
+.review {
+  padding: 10rem 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  @include breakpoint-down(laptop) {
+    padding: 10rem 4rem;
+  }
+  @include breakpoint-down(tab) {
+    padding: 8rem 2rem;
+  }
+  @include breakpoint-down(mobile) {
+    padding: 6rem 1rem;
+  }
+  .rec {
+    .rec-arrow {
+      display: none;
+    }
+    .rec-pagination {
+      margin-top: 2rem;
+    }
+    .rec-dot {
+      width: 15px;
+      height: 15px;
+      box-shadow: 0px 0px 1px 3px #6e07f3;
+    }
+    .rec-dot_active {
+      width: 15px;
+      height: 15px;
+      background-color: #6e07f3;
+      box-shadow: 0px 0px 1px 3px #6e07f3;
+    }
+  }
+  &__heading {
+    margin-bottom: 3rem;
+    h4 {
+      font-family: "Rubik", sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      @include breakpoint-down(tab) {
+        font-size: 1rem;
+      }
+      @include breakpoint-down(mobile) {
+        font-size: 0.9375rem;
+      }
+    }
+    h2 {
+      font-size: 3rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      @include breakpoint-down(tab) {
+        font-size: 2.5rem;
+      }
+      @include breakpoint-down(mobile) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  &__content {
+    img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 3rem;
+    }
+    .review__text {
+      font-family: "Rubik", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 3rem;
+      @include breakpoint-down(tab) {
+        font-size: 16px;
+      }
+      @include breakpoint-down(mobile) {
+        font-size: 0.9375rem;
+      }
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      @include breakpoint-down(tab) {
+        font-size: 24px;
+      }
+      @include breakpoint-down(mobile) {
+        font-size: 20px;
+      }
+    }
+    p {
+      font-family: "Rubik", sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+    }
+  }
+}

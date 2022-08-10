@@ -1,0 +1,67 @@
+.card {
+  margin-inline: 2rem;
+  &__wrapper {
+    background-color: #6e07f3;
+    border-radius: 15px;
+    color: #fff;
+    width: 1320px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5rem;
+    @media screen and (max-width: 1350px) {
+      width: 100%;
+    }
+    padding: 5rem;
+    @media screen and (max-width: 1350px) {
+      padding: 3rem;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    @include breakpoint-down(tab) {
+      flex-direction: column;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #fff;
+      @include breakpoint-down(tab) {
+        margin-bottom: 3rem;
+      }
+      @include breakpoint-down(mobile) {
+        font-size: 1.8rem;
+      }
+    }
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      @include breakpoint-down(tab) {
+        margin-bottom: 3rem;
+      }
+      @include breakpoint-down(mobile) {
+        font-size: 16px;
+      }
+    }
+    .card__btn {
+      border: 3px solid #fff;
+      background: transparent;
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      font-size: 20px;
+      font-family: "Rubik", sans-serif;
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+      @include breakpoint-down(mobile) {
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+      }
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+.hero {
+  margin: 10rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include breakpoint-down(laptop) {
+    margin: 10rem 4rem;
+  }
+  @include breakpoint-down(tab) {
+    margin: 10rem 2rem;
+  }
+  @include breakpoint-down(mobile) {
+    margin: 10rem 1rem;
+  }
+  &__heading {
+    width: 1200px;
+    height: auto;
+    text-align: center;
+    margin-bottom: 5rem;
+    @include breakpoint-down(laptop) {
+      width: 100%;
+    }
+  }
+  &__subHeading {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    @include breakpoint-down(tab) {
+      font-size: 1.2rem;
+    }
+    @include breakpoint-down(mobile) {
+      font-size: 0.9375rem;
+    }
+  }
+  &__line {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px dashed #6e07f3;
+    width: 250px;
+  }
+  &__mainHeading {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+    @include breakpoint-down(tab) {
+      font-size: 3rem;
+    }
+    @include breakpoint-down(mobile) {
+      font-size: 2rem;
+    }
+    br {
+      @include breakpoint-down(tab) {
+        display: none;
+      }
+    }
+  }
+  &__text {
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 30px;
+    @include breakpoint-down(tab) {
+      font-size: 1rem;
+    }
+    @include breakpoint-down(mobile) {
+      font-size: 0.9375rem;
+    }
+    br {
+      @include breakpoint-down(tab) {
+        display: none;
+      }
+    }
+  }
+  &__img {
+    img {
+      width: 1200px;
+      height: auto;
+      @include breakpoint-down(laptop) {
+        width: 100%;
+      }
+    }
+  }
+}
