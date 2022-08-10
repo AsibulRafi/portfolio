@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { FiSun } from "react-icons/fi";
+// import { FiSun } from "react-icons/fi";
 import { HiMoon } from "react-icons/hi";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
